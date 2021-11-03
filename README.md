@@ -12,7 +12,8 @@ Profesor Gustavo Grillasca
   - [Consideraciones básicas para desarrollo](#consideraciones-básicas-para-desarrollo) 
   - [Lenguajes y herramientas para el desarrollo de blockchain](#lenguajes-y-herramientas-para-el-desarrollo-de-blockchain) 
   - [Solidity](#solidity) 
-  - [Descargar e instalar UIPath](#descargar-e-instalar-uipath) 
+  - [Uso de wallets: Metamask](#uso-de-wallets-metamask) 
+  - [Testnets: Ropsten y Rinkeby](#testnets-ropsten-y-rinkeby) 
 
 
 # Introducción
@@ -70,3 +71,34 @@ Aún así, puedes utilizarlos como herramientas de administración y soporte par
 ## Solidity
 
 Solidity es un lenguaje de programación de alto nivel orientado a objetos, es un lenguaje de corchetes fuertemente influenciado por C ++, Python y JavaScript, y está diseñado para interactuar con la EVM.
+
+Ejemplo de Smart Contract en Solidity:
+
+[![1](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/1.png?raw=true "1")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/1.png?raw=true "1")
+
+Documentación oficial de Solidity en la página oficial de Ethereum: https://ethereum.org/en/developers/docs/smart-contracts/languages/#solidity 
+
+Página oficial y documentación de Solidity: https://soliditylang.org/
+https://solidity-es.readthedocs.io/es/latest/
+
+Ejemplos del lenguaje desde lo simple hasta díficil: https://solidity-by-example.org/
+
+Estandares más utilizados para ahorrar tiempo con nuestros trabajos: https://openzeppelin.com/contracts/
+
+Recurso de la comunidad para aprender con CriptoZombies: https://cryptozombies.io/es/
+
+## Uso de wallets: Metamask
+
+MetaMask es una extensión de navegador popular y establecida que funciona como una billetera de criptomonedas que se conecta a la cadena de bloques Ethereum. MetaMask permite a los usuarios interactuar con el ecosistema Ethereum, que alberga un vasto universo de aplicaciones descentralizadas (Dapps), sin tener que descargar toda la cadena de bloques en su dispositivo. Como tal, es una de las mejores soluciones de billetera Ethereum para un fácil acceso a intercambios descentralizados (DEX), plataformas de juegos, sitios de juegos de azar y muchas otras aplicaciones.
+
+[![2](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/2.png?raw=true "2")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/2.png?raw=true "2")
+
+[![3](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/3.png?raw=true "3")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/3.png?raw=true "3")
+
+## Testnets: Ropsten y Rinkeby
+
+Surgen de la necesidad de poder probar smart contracts de forma gratuita y rápida a través de la red ethereum. Las más usadas por su utilidad son:
+
+- **Ropsten:** Se accede en la pestaña de redes en Metamask y se adquiere el fondo de prueba en el Ropsten Ethereum Faucet https://faucet.ropsten.be/
+
+- **Rinkeby:** Se accede en la pestaña de redes en Metamask y se adquiere el fondo de prueba en el Rinkeby Ethereum Faucet
