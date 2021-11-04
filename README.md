@@ -14,6 +14,10 @@ Profesor Gustavo Grillasca
   - [Solidity](#solidity) 
   - [Uso de wallets: Metamask](#uso-de-wallets-metamask) 
   - [Testnets: Ropsten y Rinkeby](#testnets-ropsten-y-rinkeby) 
+- [Ambientes de trabajo](#ambientes-de-trabajo)
+  - [RemixIDE](#remixide) 
+  - [Primer contrato en RemixIDE](#primer-contrato-en-remixide) 
+  - [Solidity](#solidity)  
 
 
 # Introducción
@@ -102,3 +106,59 @@ Surgen de la necesidad de poder probar smart contracts de forma gratuita y rápi
 - **Ropsten:** Se accede en la pestaña de redes en Metamask y se adquiere el fondo de prueba en el Ropsten Ethereum Faucet https://faucet.ropsten.be/
 
 - **Rinkeby:** Se accede en la pestaña de redes en Metamask y se adquiere el fondo de prueba en el Rinkeby Ethereum Faucet
+
+
+# Ambientes de trabajo
+
+## RemixIDE
+
+IDE = Integrated Development Environment
+
+Es la opción ideal para comenzar a desarrollar en lenguajes como Solidity. https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.7.0+commit.9e61f92b.js 
+
+Esta compuestro por tres ventanas: librerias, compilación y deploy. En librerias se pueden escoger contratos de prueba donde se despliega el código del contrato en Solidity.
+
+[![4](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/4.png?raw=true "4")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/4.png?raw=true "4")
+
+En compilación el motor estudiará y revisará el código en busca de errores para continuar, es necesario que el lenguaje pragma sea la misma versión del compilador, entre algunas otras opciones.
+
+[![5](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/5.png?raw=true "5")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/5.png?raw=true "5")
+
+En deploy envía a la red con que se comunica estableciendo un ambiente de trabajo, la cuenta de prueba con recursos, el gas o impuesto máximo, entre otros parametros.
+
+[![6](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/6.png?raw=true "6")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/6.png?raw=true "6")
+
+## Primer contrato en RemixIDE
+
+Se realizará un contrato sencillo cuyo proposito es sumar dos números:
+
+Es importante escribir lass 2 primeras líneas de código: primero la licencia y luego la versión del compilador para no tener problemas al momento de compilar. 
+
+El equivalente a un “main” en Solidity, es el bloque de código llamado contract.
+
+    // SPDX-License-Identifier: MIT
+    pragma solidity >=0.7.0 <0.9.0; //version de compilador
+    
+    contract Suma {
+        
+        function sumar(int numero1, int numero2) public pure returns (int) {
+            return numero1 + numero2;
+        }
+        
+    }
+
+Una vez en RemixIDE entramos en la pestaña de librerias, en la carpeta de contracts creamos uno nuevo llamado **suma.sol** se abrirá el achivo y escribimos el código anterior.
+
+[![7](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/7.png?raw=true "7")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/7.png?raw=true "7")
+
+En la siguiente pestaña compilamos el código ó se puede poner en autocompilar:
+
+[![8](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/8.png?raw=true "8")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/8.png?raw=true "8")
+
+Puedes ver el funcionamiento y resultado de las funciones de tu contrato en la pestaña de Deploy, hasta abajo agregando los dos números y dando clic en **call**, también se despliega en la terminal toda la información de la transacción:
+
+[![9](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/9.png?raw=true "9")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/9.png?raw=true "9")
+
+También se pueden agregar los parámetros de esta forma:
+
+[![x](https://static.platzi.com/media/user_upload/Screen%20Shot%202021-11-01%20at%2011.59.39%20PM-7da0e83e-ad72-42d7-a28a-06412a3f7c68.jpg "x")](https://static.platzi.com/media/user_upload/Screen%20Shot%202021-11-01%20at%2011.59.39%20PM-7da0e83e-ad72-42d7-a28a-06412a3f7c68.jpg "x")
