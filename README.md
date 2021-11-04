@@ -155,10 +155,56 @@ En la siguiente pestaña compilamos el código ó se puede poner en autocompilar
 
 [![8](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/8.png?raw=true "8")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/8.png?raw=true "8")
 
-Puedes ver el funcionamiento y resultado de las funciones de tu contrato en la pestaña de Deploy, hasta abajo agregando los dos números y dando clic en **call**, también se despliega en la terminal toda la información de la transacción:
+Se realiza el envío a la red con la opción de Deploy y en la terminal se recibe la verificación:
 
 [![9](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/9.png?raw=true "9")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/9.png?raw=true "9")
+
+Puedes ver el funcionamiento y resultado de las funciones de tu contrato en la pestaña de Deploy, hasta abajo agregando los dos números y dando clic en **call**, también se despliega en la terminal toda la información de la transacción:
+
+[![10](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/10.png?raw=true "10")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/10.png?raw=true "10")
 
 También se pueden agregar los parámetros de esta forma:
 
 [![x](https://static.platzi.com/media/user_upload/Screen%20Shot%202021-11-01%20at%2011.59.39%20PM-7da0e83e-ad72-42d7-a28a-06412a3f7c68.jpg "x")](https://static.platzi.com/media/user_upload/Screen%20Shot%202021-11-01%20at%2011.59.39%20PM-7da0e83e-ad72-42d7-a28a-06412a3f7c68.jpg "x")
+
+## Truffle Suite
+
+ES un entorno de desarrollo diseñado para facilitar el desarrollo de aplicaciones Blockchain, permite compilar código, desplegar contratos inteligentes y hacer el frontend de las aplicaciones. Cuenta con tres partes: Smart Contracts Made Sweeter, One Click Blockchain y Fresh Chain-Data For Front-ends.
+
+Lo primero es instalar NPM y Node.js en sus versiones más recientes, ya que se requiere previamente para instalar Truffle.
+
+[![11](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/11.png?raw=true "11")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/11.png?raw=true "11")
+
+[![12](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/12.png?raw=true "12")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/12.png?raw=true "12")
+
+Una vez instalado se realiza la verificación de versión en la consola de Windows con los comandos `node -v` y `npm -v` , también se buscan actualizaciones para npm con el comando `npm install -g npm@latest`
+
+[![13](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/13.png?raw=true "13")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/13.png?raw=true "13")
+
+En la consola de preferencia (En este caso WSL Ubuntu) se confirma que las librerias de npm esten actualizadas con el comando `npm update -g`, después se escribe el comando `sudo npm install -g truffle` para instalar Truffle:
+
+[![14](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/14.png?raw=true "14")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/14.png?raw=true "14")
+
+Para confirmar que todo salió bien se utiliza el comando `truffle --version`:
+
+[![15](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/15.png?raw=true "15")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/15.png?raw=true "15")
+
+Ya instalado Truffle Suite se puede empezar con **Ganache,** que ayudará a encender rápidamente una cadena de bloques personal de **Ethereum** que se puede usar para ejecutar pruebas, ejecutar comandos e inspeccionar el estado mientras controla cómo funciona la cadena.
+
+En el siguiente enlace se descarga e instala Ganage https://www.trufflesuite.com/ganache
+
+[![16](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/16.png?raw=true "16")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/16.png?raw=true "16")
+
+[![17](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/17.png?raw=true "17")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/17.png?raw=true "17")
+
+Una vez instalado podremos ver la plataforma donde estan las pestañas de Cuentas con todas las direcciones de prueba (10), Bloques usados con su Gas, Transacciones realizadas, Contratos programados, Eventos y Logs donde la blockchain se comunicara con el usuario. 
+
+[![18](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/18.png?raw=true "18")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/18.png?raw=true "18")
+
+El control de la aplicación en su mayoria es por medio de la terminal, por lo tanto es necesario instalarlo con el comando`sudo npm install -g ganache-cli` y se verifica la instalación con el comando `ganache-cli --version`
+
+[![19](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/19.png?raw=true "19")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/19.png?raw=true "19")
+
+Para inicializar Ganache y visualizar la información de la aplicación se utiliza el comando `ganache-cli`
+
+[![20](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/20.png?raw=true "20")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/20.png?raw=true "20")
