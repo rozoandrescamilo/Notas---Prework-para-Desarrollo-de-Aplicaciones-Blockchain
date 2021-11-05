@@ -17,7 +17,7 @@ Profesor Gustavo Grillasca
 - [Ambientes de trabajo](#ambientes-de-trabajo)
   - [RemixIDE](#remixide) 
   - [Primer contrato en RemixIDE](#primer-contrato-en-remixide) 
-  - [Solidity](#solidity)  
+  - [Truffle Suite](#truffle-suite)  
 
 
 # Introducción
@@ -208,3 +208,48 @@ El control de la aplicación en su mayoria es por medio de la terminal, por lo t
 Para inicializar Ganache y visualizar la información de la aplicación se utiliza el comando `ganache-cli`
 
 [![20](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/20.png?raw=true "20")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/20.png?raw=true "20")
+
+
+El último producto de Truffle es **Drizzle** que es una colección de librerías de front-end que hacen que escribir interfaces de usuario de dapp sea más fácil y predecible. Esta no requiere instalación de manera global sino solo en la carpeta del proyecto con el comando `npm install --save @drizzle/store` en la terminal.
+
+https://www.trufflesuite.com/drizzle
+
+[![21](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/21.png?raw=true "21")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/21.png?raw=true "21")
+
+Como ejercicio se creará un código que salude a la blockchain, para esto se crea una carpeta de nombre **hello-blockchain** y se inicializa el entorno de trabajo con el comando `truffle init`. Con un solo comando crea a estructura del proyecto y todos lo archivos que se requieren:
+
+[![22](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/22.png?raw=true "22")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/22.png?raw=true "22")
+
+Al visualizar la carpeta de **Visual Studio Code** podemos ver las carpetas internas y los archivos de Solidity y JavaScript que lo componen. Lo primero es quitar los comentarios de la sección de **development** del bloque **networks** en el archivo de configuración **tuffle-config.js**
+
+[![23](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/23.png?raw=true "23")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/23.png?raw=true "23")
+
+Para el siguiente paso se requiere instalar la extensión **Solidity** para VS Code con el fin de ayudar con la sintaxis, la compilación, entre otros. En la carpeta de **contracts** se crea un nuevo archivo de nombre **helloblockchain.sol** y se escribe el código del contrato que usaremos:
+
+[![24](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/24.png?raw=true "24")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/24.png?raw=true "24")
+
+[![25](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/25.png?raw=true "25")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/25.png?raw=true "25")
+
+En la carpeta **migrations** se crea un nuevo archivo con el nombre **2_hello_blockchain.js** donde pegaremos el código de despliegue de JavaScript en la blockchain local.
+
+[![26](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/26.png?raw=true "26")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/26.png?raw=true "26")
+
+Ahora se requiere el uso de dos ventanas de la terminal, en una se analizará lo que pasa con nuestro contrato que hace lo mismo que la aplicación Ganache solo se utiliza el comando `ganache-cli`, importante que con escuchando en 127.0.0.1:8545. En la otra ventana de la terminal se realizará la configuración como desarrollador y se utiliza el comando `truffle console —network development`, después se escribe `web3.eth.getBlock(0)`  para desplegar la información del bloque 0 y se puede ir visualizando en la ventana de Ganache que esta conectada a la blockchain local.
+
+[![27](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/27.png?raw=true "27")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/27.png?raw=true "27")
+
+Para comprobar que no hay errores se utiliza en nuestra terminal de truffle `compile` y para hacer deploy o despliegue de nuestro contrato se escribe `migrate`, muestra todas las transacciones necesarias para el despliegue y creación de nuevos bloques.
+
+[![28](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/28.png?raw=true "28")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/28.png?raw=true "28")
+
+Al final del output se puede visualizar un Resumen con el total de despliegues, costos totales de transacción y creación de bloques. Arriba de esto se puede ver la información de despliegue de nuestro contrato **helloblockchain.** 
+
+[![29](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/29.png?raw=true "29")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/29.png?raw=true "29")
+
+Solo falta interactuar con la función **sayHi** creando una instancia del contrato usando el comando `const instance = await HelloBlockchain.deployed()`
+
+Para llamar esta instancia se utiliza el comando `instance.sayHi.call()` se puede visualizar en la terminal de Truffle el mensaje "!Hello, blockchain!" como habiamos programado y en la terminal de Ganache se registró la llamada a la función.
+
+[![30](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/30.png?raw=true "30")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/30.png?raw=true "30")
+
+En este punto ya se creó un contrato inteligente, se genero una blockchain local y se desplego el contrato en la blockchain local.
