@@ -18,7 +18,7 @@ Profesor Gustavo Grillasca
   - [RemixIDE](#remixide) 
   - [Primer contrato en RemixIDE](#primer-contrato-en-remixide) 
   - [Truffle Suite](#truffle-suite)  
-
+  - [Conectando la blockchain con el navegador: Web3.js](#conectando-la-blockchain-con-el-navegador-web3.js)
 
 # Introducción
 
@@ -169,7 +169,7 @@ También se pueden agregar los parámetros de esta forma:
 
 ## Truffle Suite
 
-ES un entorno de desarrollo diseñado para facilitar el desarrollo de aplicaciones Blockchain, permite compilar código, desplegar contratos inteligentes y hacer el frontend de las aplicaciones. Cuenta con tres partes: Smart Contracts Made Sweeter, One Click Blockchain y Fresh Chain-Data For Front-ends.
+Es un entorno de desarrollo diseñado para facilitar el desarrollo de aplicaciones Blockchain, permite compilar código, desplegar contratos inteligentes y hacer el frontend de las aplicaciones. Cuenta con tres partes: Smart Contracts Made Sweeter, One Click Blockchain y Fresh Chain-Data For Front-ends.
 
 Lo primero es instalar NPM y Node.js en sus versiones más recientes, ya que se requiere previamente para instalar Truffle.
 
@@ -177,7 +177,7 @@ Lo primero es instalar NPM y Node.js en sus versiones más recientes, ya que se 
 
 [![12](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/12.png?raw=true "12")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/12.png?raw=true "12")
 
-Una vez instalado se realiza la verificación de versión en la consola de Windows con los comandos `node -v` y `npm -v` , también se buscan actualizaciones para npm con el comando `npm install -g npm@latest`
+Una vez instalado se realiza la verificación de versión en la consola de Windows con los comandos `node -v` y `npm -v` , también se buscan actualizaciones para npm con el comando `npm install -g npm@latest` y para node `sudo apt-get install -y nodejs`
 
 [![13](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/13.png?raw=true "13")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/13.png?raw=true "13")
 
@@ -253,3 +253,91 @@ Para llamar esta instancia se utiliza el comando `instance.sayHi.call()` se pued
 [![30](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/30.png?raw=true "30")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/30.png?raw=true "30")
 
 En este punto ya se creó un contrato inteligente, se genero una blockchain local y se desplego el contrato en la blockchain local.
+
+## Hardhat
+
+Una de las herramientas más utilizadas para el desarrollo en la red de Ethereum, permite hacer el proceso de desarrollo, despliegue y test de manera fácil en una red de prueba llamada Hardhat. 
+https://hardhat.org/
+
+[![31](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/31.png?raw=true "31")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/31.png?raw=true "31")
+
+Los proyectos de Hardhat, son proyectos de NPM con el paquete Hardhat instalado que se ayuda de otros plugins para incrementar sus funcionalidades.
+
+Para realizar la instalación del ambiente de desarrollo se crea una carpeta de nombre **hola-hardhat** y entrar en ella. Creando el proyecto en NPM con el comando `npm init` (dar Enter a todas las preguntas para dejar los valores de instalación por defecto) esto para crear el archivo **package.json:**
+
+[![32](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/32.png?raw=true "32")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/32.png?raw=true "32")
+
+Para instalar HardHat en el proyecto se utiliza el comando `npm install --save-dev hardhat` de esta manera protejera el proyecto para posibles cambios de versión.
+
+[![33](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/33.png?raw=true "33")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/33.png?raw=true "33")
+
+Para ejecutar Hardhat se usa el comando `npx hardhat` y se mostrará en pantalla el nombre grande, la bienvenida y las opciones de crear un proyecto. Seleccionar **Create a basic sample project,** esto nos creará un proyecto de pruebas con archivos básicos.
+
+Para ver las direcciones de prueba con las que estaremos interactuando. Son sólo de prueba, no las utilices para recibir tokens verdaderos de mercado.
+
+[![34](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/34.png?raw=true "34")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/34.png?raw=true "34")
+
+Se responden las preguntas para crear el proyecto y se realizará la instalación de todas las herramientas:
+
+[![35](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/35.png?raw=true "35")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/35.png?raw=true "35")
+
+[![36](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/36.png?raw=true "36")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/36.png?raw=true "36")
+
+Con el comando `npx hardhat accounts` se pueden revisar las cuentas de prueba que se tienen para relizar test de las transacciones:
+
+[![37](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/37.png?raw=true "37")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/37.png?raw=true "37")
+
+Para poder compilar en la terminal se escribe `npx hardhat compile`
+
+[![38](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/38.png?raw=true "38")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/38.png?raw=true "38")
+
+Una vez compilado se podrá desplegar el contrato en la red blockchain local utilizando el script incluido **sample-scrpts.js** utilizando el comando `npx hardhat run scripts/sample-script.js`, se escribirá **Hello, Hardhat!** y la dirección del contrato como confirmación de que se desplego correctamente.
+
+[![39](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/39.png?raw=true "39")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/39.png?raw=true "39")
+
+Una ventaja poderosa de Hardhat es la capacidad de hacer un fork de la mainnet de Ethereum, para simular como se comportarán los contratos a nivel local. Permite interectuar con protocolos ya desplegados lo que enriquese el entorno de trabajo.
+
+Otra herramienta alternativa que utiliza el lenguaje Python es **Brownie** https://eth-brownie.readthedocs.io/en/stable/toctree.html 
+
+## Conectando la blockchain con el navegador: Web3.js
+
+**Web3.js** es una colección de librerías que te permite interactuar de manera local o remota con tu node de Ethereum ultilizando el protocolo HTTP, IPC o WebSocket
+Desde RemixIDe se pueden encontrar los archivos de ejemplos de ejecución de Web3.js
+
+https://github.com/ChainSafe/web3.js
+
+Para agregar la Web3.js se utiliza la documentación oficial https://web3js.readthedocs.io/en/v1.5.2/getting-started.html#adding-web3-js donde se utiliza el comando `npm install web3` para instalar todas las librerias:
+
+[![40](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/40.png?raw=true "40")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/40.png?raw=true "40")
+
+Para interectuar con la red de Ethereum se utiliza un protocolo de llamada a procedimiento remoto codificado en JSON (JSON-RPC), que conecta a las librerias con un nodo de la red.
+
+Se utiliza los documentos de estandares en **OpenZeppelin** https://openzeppelin.com/contracts/ como una guía, se selecciona el contrato del token ERC20 y se pega en un archivo nuevo en **Remix IDE** con el nombre **EjemploERC20.sol**
+
+    // contracts/GLDToken.sol
+    // SPDX-License-Identifier: MIT
+    pragma solidity ^0.8.0;
+    
+    import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+    
+    contract GLDToken is ERC20 {
+        constructor(uint256 initialSupply) ERC20("Gold", "GLD") {
+            _mint(msg.sender, initialSupply);
+        }
+    }
+
+[![41](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/41.png?raw=true "41")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/41.png?raw=true "41")
+
+En la pestaña de complilación se verifica la versión correcta 0.8.0, el lenguaje y se realiza la compilación del archivo.
+
+[![42](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/42.png?raw=true "42")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/42.png?raw=true "42")
+
+En la persona de Deploy se selecciona como ambiente **Injected Web3,** si se conecta la wallet de Metamask en la red de pruebas Ropsten se detectará automaticamente la dirección de la cuenta.
+
+[![43](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/43.png?raw=true "43")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/43.png?raw=true "43")
+
+Al hacer deploy pedirá nuestra confirmación en la wallet informando los balances y fees, al confirmar se verá reflejada la transacción en la sección de **Actividad** de la billetera y al seleccionarla se desplegaran los detalles.
+
+[![44](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/44.png?raw=true "44")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/44.png?raw=true "44") [![45](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/45.png?raw=true "45")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/45.png?raw=true "45")
+
+[![46](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/46.png?raw=true "46")](https://github.com/hackmilo/Notas---Prework-para-Desarrollo-de-Aplicaciones-Blockchain/blob/main/img/46.png?raw=true "46")
