@@ -17,7 +17,8 @@ Profesor Gustavo Grillasca
 - [Ambientes de trabajo](#ambientes-de-trabajo)
   - [RemixIDE](#remixide) 
   - [Primer contrato en RemixIDE](#primer-contrato-en-remixide) 
-  - [Truffle Suite](#truffle-suite)  
+  - [Truffle Suite](#truffle-suite)  .
+  - [Hardhat](#hardhat)  
   - [Conectando la blockchain con el navegador: Web3.js](#conectando-la-blockchain-con-el-navegador-web3.js)
 
 # Introducción
