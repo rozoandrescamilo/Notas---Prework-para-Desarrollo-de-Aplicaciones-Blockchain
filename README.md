@@ -19,7 +19,7 @@ Profesor Gustavo Grillasca
   - [Primer contrato en RemixIDE](#primer-contrato-en-remixide) 
   - [Truffle Suite](#truffle-suite)  .
   - [Hardhat](#hardhat)  
-  - [Conectando la blockchain con el navegador: Web3.js](#conectando-la-blockchain-con-el-navegador-web3.js)
+  - [Conectando la blockchain con el navegador: Web3.js](#conectando-la-blockchain-con-el-navegador-web3js)
 
 # Introducción
 
